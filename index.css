@@ -1,0 +1,15 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+form{
+    display: flex;
+}
+
+.wrapper{
+    height: calc(100vh - 55px);
+    background-color: #cccccc;
+    padding: 100px;
+}
