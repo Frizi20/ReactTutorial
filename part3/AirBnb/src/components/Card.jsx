@@ -1,33 +1,40 @@
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import {faStar} from '@fortawesome/free-solid-svg-icons'
 
-export default function Card(){
+
+
+export default function Card(props){
+
+    const {img,stats,country,service,price,status} = props
+
+    console.log(stats)
+
     return(
         <div className="card">
             <div className="image">
-                <img src="https://images.pexels.com/photos/3369578/pexels-photo-3369578.jpeg" alt="" />
+                <img src={`../assets/${img}`} alt="" />
             </div>
             <div className="info">
                 <div className="star">
                     <FontAwesomeIcon icon={faStar}/>
                 </div>
                 <div className="rating">
-                    5.0 <span className='nrRatings'>(6)</span>
+                    {stats.rating} <span className='nrRatings'>({stats.reviewCount})</span>
                 </div>
                 <div className="country">
-                    USA
+                    {country}
                 </div>
             </div>
             <div className="service">
-                Life lessons with Katie Zafares
+                {service}
             </div>
 
             <div className="price-container">
-                <b>From <span className='price'>$125</span></b> 
+                <b>From <span className='price'>${price}</span></b> 
                 / person
             </div>
             <div className="status">
-                SOLD OUT
+                {status}
             </div>
         </div>
     )
