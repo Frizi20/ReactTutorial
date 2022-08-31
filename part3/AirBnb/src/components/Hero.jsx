@@ -6,7 +6,7 @@ import cardsData from '../data'
 
 export default function Hero(){
 
-    console.log(cardsData)
+    // console.log(cardsData)
 
     const firstCard = {
         // img:'https://images.pexels.com/photos/3369578/pexels-photo-3369578.jpeg',
@@ -30,16 +30,10 @@ export default function Hero(){
     }
 
     const cardsJsx = cardsData.map(card =>{
-        return <Card 
-        img={card.coverImg}
-        price = {card.price}
-        description = {card.title}
-        stats = {card.stats}
-        />
+        return <Card key={card.id} {...card}/>
     })
 
-    console.log(cardsJsx)
-
+   
     return(
         <section>
             <img src="" alt="" />
@@ -48,7 +42,7 @@ export default function Hero(){
 
 
             <div className="gallery">
-                {cardsJsx}
+                {[...cardsJsx]}
             </div>
 
         </section>

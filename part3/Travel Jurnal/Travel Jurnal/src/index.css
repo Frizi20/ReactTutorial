@@ -1,0 +1,135 @@
+
+:root{
+  --long-p:-apple-system,BlinkMacSystemFont,"Segoe UI Adjusted","Segoe UI","Liberation Sans",sans-serif;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+body{
+  min-height: 100vh;
+  width: 100%;
+  background-color: #eee;
+}
+
+.wrapper{
+  min-height: 100vh;
+}
+
+
+
+nav{
+  width: 100%;
+  height:70px;
+  background-color: rgb(255, 93, 93);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: sticky;
+  top:0;
+  left: 0;
+  z-index: 100;
+}
+
+.nav-logo{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.nav-logo .logo--text{
+  margin-left: 10px;
+  font-size: 1.2rem;
+}
+
+.nav-logo .logo--icon{
+  font-size: 1.5rem;
+}
+
+
+/* Main */
+
+.main{
+  padding: 50px;
+  /* background: #a8a8a8; */
+  flex: 1;
+}
+
+.place{
+  /* background-color: green; */
+  min-height: 300px;
+  padding: 20px 0;
+  /* border-bottom: 1px solid #8080807a; */
+  display: flex;
+  box-shadow: 0px 3px 2px #69696914;
+}
+
+.place .image{
+  position: relative;
+  flex: 0 0 180px;
+}
+
+.place .image img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 30%;
+  border-radius: 10px;
+}
+
+.place .info{
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.place .info--country{
+  display: flex;
+}
+
+.place .info--country  div:not(:first-child){
+  margin-left: 10px;
+}
+
+.place .info--country div:last-child{
+  margin-left: 20px;
+}
+
+.place .attraction-name{
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.info--country .google-maps a{
+  color: grey;
+}
+
+.pin-icon{
+  position: relative;
+}
+.pin-icon::before{
+  content: '';
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: #fff;
+  position: absolute;
+  /* top: 50%; */
+  left: 50%;
+  transform: translate(-50%, 80%);
+}
+
+.info .date-interval{
+  color: #666666;
+  font-weight: 700;
+}
+
+.info .description{
+  font-family: var(--long-p);
+}

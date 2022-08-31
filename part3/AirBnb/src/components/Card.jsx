@@ -2,17 +2,16 @@ import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import {faStar} from '@fortawesome/free-solid-svg-icons'
 
 
-
 export default function Card(props){
+    console.log(props)
+    const {coverImg,stats,country,title,price,openSpots} = props
 
-    const {img,stats,country,service,price,status} = props
-
-    console.log(stats)
+   
 
     return(
         <div className="card">
             <div className="image">
-                <img src={`../assets/${img}`} alt="" />
+                <img src={`/src/assets/${coverImg}`} alt="" />
             </div>
             <div className="info">
                 <div className="star">
@@ -26,16 +25,14 @@ export default function Card(props){
                 </div>
             </div>
             <div className="service">
-                {service}
+                {title}
             </div>
 
             <div className="price-container">
                 <b>From <span className='price'>${price}</span></b> 
                 / person
             </div>
-            <div className="status">
-                {status}
-            </div>
+            {openSpots === 0 && <div className="status">SOLD OUT</div> }
         </div>
     )
 }
